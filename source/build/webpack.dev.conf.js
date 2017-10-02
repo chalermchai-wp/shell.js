@@ -30,6 +30,11 @@ module.exports = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
-    new FriendlyErrorsPlugin()
+    new FriendlyErrorsPlugin(),
+
+    new webpack.ProvidePlugin({
+      Typed:          'typed.js',
+      'window.Typed': 'typed.js'
+    })
   ]
 })

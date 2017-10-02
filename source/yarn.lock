@@ -2274,6 +2274,10 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
+expose-loader@^0.7.3:
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/expose-loader/-/expose-loader-0.7.3.tgz#35fbd3659789e4faa81f59de8b7e9fc39e466d51"
+
 express@^4.14.1, express@^4.15.2:
   version "4.16.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.1.tgz#6b33b560183c9b253b7b62144df33a4654ac9ed0"
@@ -5292,6 +5296,10 @@ shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
+shell.js@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/shell.js/-/shell.js-2.0.1.tgz#b7f073df4a3d90e770971b3fed80254622df8705"
+
 shelljs@^0.7.5, shelljs@^0.7.6:
   version "0.7.8"
   resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.7.8.tgz#decbcf874b0d1e5fb72e14b164a9683048e9acb3"
@@ -5775,6 +5783,10 @@ type-is@~1.6.15:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.15"
+
+typed.js@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.6.tgz#4e270f6fbc5e5e94a6c38fa29407c404745a7d61"
 
 typedarray@^0.0.6:
   version "0.0.6"
