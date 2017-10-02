@@ -1,72 +1,30 @@
-# Shell.js
+# shell.js-github-page
 
-Quickly create a terminal window.
+> Shell.js GitHub Page
 
-[![GitHub version](https://badge.fury.io/gh/davidecaruso%2Fshell.js.svg)](https://badge.fury.io/gh/davidecaruso%2Fshell.js)
-[![Bower version](https://badge.fury.io/bo/shell.js.svg)](#install)
-[![npm version](https://badge.fury.io/js/shell.js.svg)](https://www.npmjs.com/package/shell.js)
+## Build Setup
 
-![Screenshot](https://github.com/davidecaruso/shell.js/raw/master/assets/images/screenshot.png)
+``` bash
+# install dependencies
+npm install
 
-## Install
+# serve with hot reload at localhost:8080
+npm run dev
 
-```bash
-$ yarn add shell.js
-$ # OR
-$ npm i shell.js
-$ # OR
-$ bower install shell.js --save
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
 ```
 
-## Options
-
-For each **Shell** instance you can set the following options:
-
-| Options       | Values                                                    | Description                                                            |
-| ------------- | --------------------------------------------------------- | ---------------------------------------------------------------------- |
-| user          | string                                                    | The logged user (default: `'user'`)                                    |
-| host          | string                                                    | The local host (default: `'host'`)                                     |
-| path          | string                                                    | The current path displayed in the terminal (default: `'~'`)            |
-| style         | `'custom'`&#124;`'ubuntu'`&#124;`'osx'`&#124;`'windows'`  | The operating system (default: `'custom'`)                             |
-| theme         | `'dark'`&#124;`'light'`                                   | The theme (default: `'dark'`)                                          |
-| responsive    | `false`&#124;`true`                                       | If `true` the terminal will be fluid (default: `false`)                |
-| typed         | `false`&#124;`true`                                       | Adds the **[Typed.js][typedjs]** integration (default: `false`)     |
-| commands      | array                                                     | The commands list (default: `[]`)                                      |
-
-
-## Usage
-
-Create an HTML element with a specified ID. 
-```html
-<div id="awesome-shell"></div>
-```
-
-Then pass your DOM Element to the **Shell** constructor:
-
-```javascript
-document.addEventListener('DOMContentLoaded', function() {
-    let shell = new Shell('#awesome-shell', {
-        user: 'foobar',
-        host: 'MacMini',
-        path: '/etc/',
-        style: 'osx',
-        theme: 'dark',
-        responsive: false,
-        commands: ['First command', 'Second command', '...']
-    });
-});
-```
-
-## Author
-
-[Davide Caruso][linkedin]
-
-## License
-
-Licensed under [MIT][mit].
-
-[linkedin]: https://it.linkedin.com/in/davidecaruso93
-[mit]: http://www.opensource.org/licenses/mit-license.php
-[jquery]: http://jquery.com/
-[grunt]: http://gruntjs.com/
-[typedjs]: https://github.com/mattboldt/typed.js/
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
