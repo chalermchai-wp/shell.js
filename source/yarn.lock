@@ -2846,6 +2846,10 @@ he@1.1.1, he@1.1.x, he@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
+highlight.js@^9.12.0:
+  version "9.12.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -5297,8 +5301,8 @@ shebang-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
 shell.js@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/shell.js/-/shell.js-2.0.1.tgz#b7f073df4a3d90e770971b3fed80254622df8705"
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/shell.js/-/shell.js-2.0.2.tgz#a6662fa2c9cfe762392fed13ce3a1bad02494ce2"
 
 shelljs@^0.7.5, shelljs@^0.7.6:
   version "0.7.8"
