@@ -5301,8 +5301,8 @@ shebang-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
 
 shell.js@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/shell.js/-/shell.js-2.0.2.tgz#a6662fa2c9cfe762392fed13ce3a1bad02494ce2"
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/shell.js/-/shell.js-2.0.3.tgz#a10de048c02f76115e80d563f5da5c7d2333c526"
 
 shelljs@^0.7.5, shelljs@^0.7.6:
   version "0.7.8"
