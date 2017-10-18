@@ -30,15 +30,14 @@
       return {}
     },
     mounted () {
-      shell || Typed
-      let shell = new Shell('#shell', {
+      return new Shell('#shell', {
         user: 'guest',
         host: 'shell.js',
         path: '~',
         style: 'ubuntu',
         theme: 'dark',
         responsive: false,
-        typed: true,
+        typed: Typed,
         commands: ['sudo -i', 'Hello bro', 'This is an example of what you can do with Shell.js', 'Look at the examples page to see other styles', 'Or check out the doc for details', 'Stay tuned']
       })
     }

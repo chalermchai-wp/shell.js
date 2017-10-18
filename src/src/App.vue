@@ -32,6 +32,9 @@
   }
   #app {
     position: relative;
+    .container {
+      margin-bottom: 50px;
+    }
     .col {
       margin-top: 2em;
     }

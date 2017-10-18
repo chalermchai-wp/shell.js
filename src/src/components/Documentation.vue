@@ -43,6 +43,20 @@ bower install shell.js --save</code></pre>
     });
   });
 &lt;/script&gt;</code></pre>
+        <p>
+          If you want to use the <a href="http://www.mattboldt.com/demos/typed-js/" target="_blank" rel="nofollow">Typed.js</a>
+          integration the code will be like the following:
+        </p>
+        <pre class="hljs"><code class="html">&lt;div id="awesome-shell"&gt;&lt;/div&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  document.addEventListener('DOMContentLoaded', function() {
+    let shell = new Shell('#awesome-shell', {
+        typed: Typed
+        // ...
+    });
+  });
+&lt;/script&gt;</code></pre>
       </b-col>
     </b-row>
     <b-row>
@@ -68,7 +82,7 @@ bower install shell.js --save</code></pre>
           {Property: 'path', Description: 'Current directory', 'Value type': 'string', 'Possible values': '*', Default: '~'},
           {Property: 'style', Description: 'Operating system', 'Value type': 'string', 'Possible values': 'default | osx | ubuntu | windows', Default: 'default'},
           {Property: 'theme', Description: 'Dark or light theme', 'Value type': 'string', 'Possible values': 'dark | light', Default: 'dark'},
-          {Property: 'typed', Description: 'Use Typed.js integration', 'Value type': 'boolean', 'Possible values': 'true | false', Default: 'false'},
+          {Property: 'typed', Description: 'Add Typed.js integration', 'Value type': 'boolean | function', 'Possible values': 'false | Typed instance', Default: 'false'},
           {Property: 'responsive', Description: 'Fluid shell', 'Value type': 'boolean', 'Possible values': 'true | false', Default: 'false'},
           {Property: 'commands', Description: 'List of commands to execute', 'Value type': 'array', 'Possible values': '*', Default: '[]'},
           {Property: 'root', Description: 'Admin user or normal user', 'Value type': 'boolean', 'Possible values': 'true | false', Default: 'false'}
