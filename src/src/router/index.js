@@ -1,8 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Documentation from '@/components/Documentation'
-import Examples from '@/components/Examples'
 
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -15,18 +12,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
+      name: 'home',
+      component: () => import('@/views/Home')
     },
     {
       path: '/documentation',
-      name: 'Documentation',
-      component: Documentation
+      name: 'documentation',
+      component: () => import('@/views/Documentation')
     },
     {
       path: '/examples',
-      name: 'Examples',
-      component: Examples
+      name: 'examples',
+      component: () => import('@/views/Examples')
     }
   ]
 })

@@ -90,7 +90,12 @@ bower install shell.js --save</code></pre>
       }
     },
     mounted () {
-      hljs.initHighlighting()
+      this.highlight()
+    },
+    methods: {
+      highlight: () => {
+        hljs.initHighlighting()
+      }
     }
   }
 </script>
