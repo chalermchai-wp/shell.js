@@ -77,15 +77,69 @@ bower install shell.js --save</code></pre>
     data () {
       return {
         items: [
-          {Property: 'user', Description: 'Current user', 'Value type': 'string', 'Possible values': '*', Default: 'user'},
-          {Property: 'host', Description: 'Host name', 'Value type': 'string', 'Possible values': '*', Default: 'host'},
-          {Property: 'path', Description: 'Current directory', 'Value type': 'string', 'Possible values': '*', Default: '~'},
-          {Property: 'style', Description: 'Operating system', 'Value type': 'string', 'Possible values': 'default | osx | ubuntu | windows', Default: 'default'},
-          {Property: 'theme', Description: 'Dark or light theme', 'Value type': 'string', 'Possible values': 'dark | light', Default: 'dark'},
-          {Property: 'typed', Description: 'Add Typed.js integration', 'Value type': 'boolean | function', 'Possible values': 'false | Typed instance', Default: 'false'},
-          {Property: 'responsive', Description: 'Fluid shell', 'Value type': 'boolean', 'Possible values': 'true | false', Default: 'false'},
-          {Property: 'commands', Description: 'List of commands to execute', 'Value type': 'array', 'Possible values': '*', Default: '[]'},
-          {Property: 'root', Description: 'Admin user or normal user', 'Value type': 'boolean', 'Possible values': 'true | false', Default: 'false'}
+          {
+            Property: 'user',
+            Description: 'Current user',
+            'Value type': 'string',
+            'Possible values': '*',
+            Default: 'user'
+          },
+          {
+            Property: 'host',
+            Description: 'Host name',
+            'Value type': 'string',
+            'Possible values': '*',
+            Default: 'host'
+          },
+          {
+            Property: 'path',
+            Description: 'Current directory',
+            'Value type': 'string',
+            'Possible values': '*',
+            Default: '~'
+          },
+          {
+            Property: 'style',
+            Description: 'Operating system',
+            'Value type': 'string',
+            'Possible values': 'default | osx | ubuntu | windows',
+            Default: 'default'
+          },
+          {
+            Property: 'theme',
+            Description: 'Dark or light theme',
+            'Value type': 'string',
+            'Possible values': 'dark | light',
+            Default: 'dark'
+          },
+          {
+            Property: 'typed',
+            Description: 'Add Typed.js integration',
+            'Value type': 'boolean | function',
+            'Possible values': 'false | Typed instance',
+            Default: 'false'
+          },
+          {
+            Property: 'responsive',
+            Description: 'Fluid shell',
+            'Value type': 'boolean',
+            'Possible values': 'true | false',
+            Default: 'false'
+          },
+          {
+            Property: 'commands',
+            Description: 'List of commands to execute',
+            'Value type': 'array',
+            'Possible values': '*',
+            Default: '[]'
+          },
+          {
+            Property: 'root',
+            Description: 'Admin user or normal user',
+            'Value type': 'boolean',
+            'Possible values': 'true | false',
+            Default: 'false'
+          }
         ]
       }
     },
