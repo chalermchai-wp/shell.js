@@ -17,7 +17,7 @@
     "bootstrap-vue": "^1.0.0-beta.9",
     "expose-loader": "^0.7.3",
     "highlight.js": "^9.12.0",
-    "shell.js": "^2.0.1",
+    "shell.js": "3.0.0-rc.1",
     "style-loader": "^0.18.2",
     "typed.js": "^2.0.6",
     "vue": "^2.4.2",
