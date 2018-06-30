@@ -1,41 +1,41 @@
 <template>
-  <b-container id="examples">
-    <b-row><b-col><h3>Default</h3></b-col></b-row>
-    <b-row>
-      <b-col>
-        <div id="default"></div>
-      </b-col>
-      <b-col>
-        <div id="default-light"></div>
-      </b-col>
-    </b-row>
-    <b-row><b-col><h3>Mac OS X</h3></b-col></b-row>
-    <b-row>
-      <b-col>
-        <div id="osx"></div>
-      </b-col>
-      <b-col>
-        <div id="osx-light"></div>
-      </b-col>
-    </b-row>
-    <b-row><b-col><h3>Ubuntu</h3></b-col></b-row>
-    <b-row>
-      <b-col>
-        <div id="ubuntu"></div>
-      </b-col>
-      <b-col>
-        <div id="ubuntu-light"></div>
-      </b-col>
-    </b-row>
-    <b-row><b-col><h3>Windows</h3></b-col></b-row>
-    <b-row>
-      <b-col>
-        <div id="windows"></div>
-      </b-col>
-      <b-col></b-col>
-    </b-row>
-    <b-row><b-col></b-col></b-row>
-  </b-container>
+  <!--<b-container id="examples">-->
+    <!--<b-row><b-col><h3>Default</h3></b-col></b-row>-->
+    <!--<b-row>-->
+      <!--<b-col>-->
+        <!--<div id="default"></div>-->
+      <!--</b-col>-->
+      <!--<b-col>-->
+        <!--<div id="default-light"></div>-->
+      <!--</b-col>-->
+    <!--</b-row>-->
+    <!--<b-row><b-col><h3>Mac OS X</h3></b-col></b-row>-->
+    <!--<b-row>-->
+      <!--<b-col>-->
+        <!--<div id="osx"></div>-->
+      <!--</b-col>-->
+      <!--<b-col>-->
+        <!--<div id="osx-light"></div>-->
+      <!--</b-col>-->
+    <!--</b-row>-->
+    <!--<b-row><b-col><h3>Ubuntu</h3></b-col></b-row>-->
+    <!--<b-row>-->
+      <!--<b-col>-->
+        <!--<div id="ubuntu"></div>-->
+      <!--</b-col>-->
+      <!--<b-col>-->
+        <!--<div id="ubuntu-light"></div>-->
+      <!--</b-col>-->
+    <!--</b-row>-->
+    <!--<b-row><b-col><h3>Windows</h3></b-col></b-row>-->
+    <!--<b-row>-->
+      <!--<b-col>-->
+        <!--<div id="windows"></div>-->
+      <!--</b-col>-->
+      <!--<b-col></b-col>-->
+    <!--</b-row>-->
+    <!--<b-row><b-col></b-col></b-row>-->
+  <!--</b-container>-->
 </template>
 
 <script>

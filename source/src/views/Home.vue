@@ -48,7 +48,7 @@
         responsive: false,
         typed: Typed,
         commands: [
-          '# I\'ll write as root',
+          '# I wanna be root first',
           'sudo -i',
           '# hello bro',
           '# this is what you can do with shell.js',
@@ -75,7 +75,7 @@
     background-color: white;
     -webkit-mask: url(/static/logo.svg) no-repeat 50% 50%;
     mask: url(/static/logo.svg) no-repeat 50% 50%;
-    font-size: 7rem;
+    font-size: 6rem;
   }
 
   .buttons {
