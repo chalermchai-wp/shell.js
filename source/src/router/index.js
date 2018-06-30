@@ -13,7 +13,25 @@ export default new Router({
     {
       path: '/documentation',
       name: 'documentation',
-      component: () => import('@/views/Documentation')
+      component: () => import('@/views/Documentation'),
+      children: [
+        {
+          path: 'start',
+          name: 'documentation/start'
+        },
+        {
+          path: 'customization',
+          name: 'documentation/customization'
+        },
+        {
+          path: 'constructor-options',
+          name: 'documentation/constructor-options'
+        },
+        {
+          path: 'layout',
+          name: 'documentation/layout'
+        }
+      ]
     },
     {
       path: '/examples',

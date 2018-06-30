@@ -104,9 +104,7 @@
     padding: 0;
 
     > .container {
-      width: 100%;
       padding: 0;
-      max-width: none;
 
       .navbar-menu {
         margin: 0;
@@ -131,6 +129,5 @@
         }
       }
     }
-
   }
 </style>

@@ -27,4 +27,8 @@
   #app {
     position: relative;
   }
+  .container {
+    max-width: 1152px;
+    width: 1152px;
+  }
 </style>
