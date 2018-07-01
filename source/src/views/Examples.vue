@@ -1,72 +1,83 @@
 <template>
-  <!--<b-container id="examples">-->
-    <!--<b-row><b-col><h3>Default</h3></b-col></b-row>-->
-    <!--<b-row>-->
-      <!--<b-col>-->
-        <!--<div id="default"></div>-->
-      <!--</b-col>-->
-      <!--<b-col>-->
-        <!--<div id="default-light"></div>-->
-      <!--</b-col>-->
-    <!--</b-row>-->
-    <!--<b-row><b-col><h3>Mac OS X</h3></b-col></b-row>-->
-    <!--<b-row>-->
-      <!--<b-col>-->
-        <!--<div id="osx"></div>-->
-      <!--</b-col>-->
-      <!--<b-col>-->
-        <!--<div id="osx-light"></div>-->
-      <!--</b-col>-->
-    <!--</b-row>-->
-    <!--<b-row><b-col><h3>Ubuntu</h3></b-col></b-row>-->
-    <!--<b-row>-->
-      <!--<b-col>-->
-        <!--<div id="ubuntu"></div>-->
-      <!--</b-col>-->
-      <!--<b-col>-->
-        <!--<div id="ubuntu-light"></div>-->
-      <!--</b-col>-->
-    <!--</b-row>-->
-    <!--<b-row><b-col><h3>Windows</h3></b-col></b-row>-->
-    <!--<b-row>-->
-      <!--<b-col>-->
-        <!--<div id="windows"></div>-->
-      <!--</b-col>-->
-      <!--<b-col></b-col>-->
-    <!--</b-row>-->
-    <!--<b-row><b-col></b-col></b-row>-->
-  <!--</b-container>-->
+  <section id="examples">
+    <div class="container">
+      <section class="section">
+        <div class="container">
+          <h1 class="title">Default</h1>
+          <h2 class="subtitle"></h2>
+
+          <div class="content">
+            <div id="default"></div>
+            <div id="default-light"></div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="section">
+        <div class="container">
+          <h1 class="title">OSx</h1>
+          <h2 class="subtitle"></h2>
+
+          <div class="content">
+            <div id="osx"></div>
+            <div id="osx-light"></div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="section">
+        <div class="container">
+          <h1 class="title">Ubuntu</h1>
+          <h2 class="subtitle"></h2>
+
+          <div class="content">
+            <div id="ubuntu"></div>
+            <div id="ubuntu-light"></div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="section">
+        <div class="container">
+          <h1 class="title">Windows</h1>
+          <h2 class="subtitle"></h2>
+
+          <div class="content">
+            <div id="windows"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
 </template>
 
 <script>
   import Shell from 'shell.js'
-  import hljs from 'highlight.js'
-  import 'highlight.js/styles/agate.css'
 
   export default {
     name: 'examples',
-    data () {
-      return {}
-    },
     mounted () {
-      hljs.initHighlighting()
       return [
         new Shell('#default', {
+          responsive: false,
           user: 'guest',
           commands: ['sudo -i', 'rm -rf /', 'exit']
         }),
         new Shell('#default-light', {
+          responsive: false,
           user: 'guest',
           theme: 'light',
           commands: ['sudo -i', 'rm -rf /', 'exit']
         }),
         new Shell('#osx', {
+          responsive: false,
           user: 'guest',
           host: 'MacBook-Pro',
           style: 'osx',
           commands: ['sudo -i', 'rm -rf /', 'exit']
         }),
         new Shell('#osx-light', {
+          responsive: false,
           user: 'guest',
           host: 'MacBook-Pro',
           style: 'osx',
@@ -74,12 +85,14 @@
           commands: ['sudo -i', 'rm -rf /', 'exit']
         }),
         new Shell('#ubuntu', {
+          responsive: false,
           user: 'guest',
           host: 'localhost',
           style: 'ubuntu',
           commands: ['sudo -i', 'rm -rf /', 'exit']
         }),
         new Shell('#ubuntu-light', {
+          responsive: false,
           user: 'guest',
           host: 'localhost',
           style: 'ubuntu',
@@ -87,6 +100,7 @@
           commands: ['sudo -i', 'rm -rf /', 'exit']
         }),
         new Shell('#windows', {
+          responsive: false,
           style: 'windows',
           commands: ['sudo -i', 'rm -rf /', 'exit']
         })
@@ -96,8 +110,13 @@
 </script>
 
 <style scoped>
+  .content {
+    padding: 2rem 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
   .shell {
-    width: 100%;
-    margin: auto;
+    width: 45%;
+    display: flex;
   }
 </style>

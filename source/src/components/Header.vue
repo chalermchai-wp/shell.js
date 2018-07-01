@@ -16,6 +16,10 @@
           <div class="navbar-end">
             <router-link class="navbar-item" :to="{ name: 'documentation' }">Documentation</router-link>
             <router-link class="navbar-item" :to="{ name: 'examples' }">Examples</router-link>
+            <a title="View on GitHub" class="navbar-item" href="https://github.com/davidecaruso/shell.js" target="_blank"><b-icon
+              icon="github-circle"
+              size="is-big">
+            </b-icon></a>
           </div>
         </div>
       </div>
@@ -122,10 +126,21 @@
       }
     }
 
-    &.is-primary {
-      .navbar-burger {
-        span {
-          background-color: white;
+    a {
+      .icon {
+        height: 100%;
+      }
+    }
+
+    +desktop {
+      &.is-primary {
+        a {
+          color: white;
+        }
+        .navbar-burger {
+          span {
+            background-color: white;
+          }
         }
       }
     }
