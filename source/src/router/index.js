@@ -4,6 +4,14 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  scrollBehavior: function (to, from, savedPosition) {
+    if (to.hash) {
+      return {selector: to.hash}
+    } else {
+      return {x: 0, y: 0}
+    }
+  },
   routes: [
     {
       path: '/',
@@ -14,22 +22,22 @@ export default new Router({
       path: '/documentation',
       name: 'documentation',
       component: () => import('@/views/Documentation'),
+      redirect: 'documentation/start',
       children: [
         {
           path: 'start',
-          name: 'documentation/start'
+          name: 'documentation/start',
+          component: () => import('@/components/Documentation/Start')
         },
         {
-          path: 'customization',
-          name: 'documentation/customization'
+          path: 'usage',
+          name: 'documentation/usage',
+          component: () => import('@/components/Documentation/Usage')
         },
         {
-          path: 'constructor-options',
-          name: 'documentation/constructor-options'
-        },
-        {
-          path: 'layout',
-          name: 'documentation/layout'
+          path: 'parameters',
+          name: 'documentation/parameters',
+          component: () => import('@/components/Documentation/Parameters')
         }
       ]
     },

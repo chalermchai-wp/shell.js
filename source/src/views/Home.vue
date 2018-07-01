@@ -21,6 +21,32 @@
         </div>
       </div>
     </div>
+    <!--<div class="hero">-->
+      <!--<div class="hero-body">-->
+        <!--<div class="container">-->
+          <!--<div class="level is-mobile">-->
+            <!--<div class="level-item has-text-centered">-->
+              <!--<div>-->
+                <!--<p class="heading">Tweets</p>-->
+                <!--<p class="title">3,456</p>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="level-item has-text-centered">-->
+              <!--<div>-->
+                <!--<p class="heading">Following</p>-->
+                <!--<p class="title">123</p>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="level-item has-text-centered">-->
+              <!--<div>-->
+                <!--<p class="heading">Followers</p>-->
+                <!--<p class="title">456K</p>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
   </section>
 </template>
 

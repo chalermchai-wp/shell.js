@@ -3,21 +3,61 @@
     <p class="menu-label has-text-weight-bold">Installation</p>
     <ul class="menu-list">
       <li>
-        <router-link class="navbar-item" :to="{ name: 'documentation/start' }"><span class="menu-text">Start</span></router-link>
+        <router-link class="navbar-item" :to="{ path: '/documentation/start' }"><span class="menu-text">Start</span>
+        </router-link>
       </li>
       <li>
-        <router-link class="navbar-item" :to="{ name: 'documentation/customization' }"><span class="menu-text">Customization</span></router-link>
-      </li>
-      <li>
-        <router-link class="navbar-item" :to="{ name: 'documentation/constructor-options' }"><span class="menu-text">Constructor options</span></router-link>
+        <router-link class="navbar-item" :to="{ path: '/documentation/usage' }"><span class="menu-text">Usage</span>
+        </router-link>
       </li>
     </ul>
-    <p class="menu-label has-text-weight-bold">
-      Layout
-    </p>
-    <ul class="menu-list" style="margin-bottom: 2.5rem;">
+    <p class="menu-label has-text-weight-bold">Customization</p>
+    <ul class="menu-list">
       <li>
-        <router-link class="navbar-item" :to="{ name: 'documentation/layout' }"><span class="menu-text">Layout &amp; elements</span></router-link>
+        <router-link class="navbar-item" :to="{ path: '/documentation/parameters' }"><span
+          class="menu-text">Parameters</span></router-link>
+        <ul class="menu-list">
+          <li>
+            <router-link class="navbar-item" :to="{
+            path: '/documentation/parameters#user'
+            }"><span class="menu-text">User</span></router-link>
+          </li>
+          <li>
+            <router-link class="navbar-item" :to="{
+            path: '/documentation/parameters#host'
+            }"><span class="menu-text">Host</span></router-link>
+          </li>
+          <li>
+            <router-link class="navbar-item" :to="{
+            path: '/documentation/parameters#path'
+            }"><span class="menu-text">Path</span></router-link>
+          </li>
+          <li>
+            <router-link class="navbar-item" :to="{
+            path: '/documentation/parameters#style'
+            }"><span class="menu-text">Style</span></router-link>
+          </li>
+          <li>
+            <router-link class="navbar-item" :to="{
+            path: '/documentation/parameters#theme'
+            }"><span class="menu-text">Theme</span></router-link>
+          </li>
+          <li>
+            <router-link class="navbar-item" :to="{
+            path: '/documentation/parameters#responsive'
+            }"><span class="menu-text">Responsive</span></router-link>
+          </li>
+          <li>
+            <router-link class="navbar-item" :to="{
+            path: '/documentation/parameters#commands'
+            }"><span class="menu-text">Commands</span></router-link>
+          </li>
+          <li>
+            <router-link class="navbar-item" :to="{
+            path: '/documentation/parameters#typed'
+            }"><span class="menu-text">Typed</span></router-link>
+          </li>
+        </ul>
       </li>
     </ul>
   </aside>
@@ -25,10 +65,18 @@
 
 <script>
   export default {
-    name: 'AsideMenu'
+    name: 'AsideMenu',
+    mounted () {
+      if (this.$route.hash) {
+        this.scrollTo(this.$route.hash)
+      }
+    },
+    methods: {
+      scrollTo: function (hashtag) {
+        setTimeout(() => {
+          location.href = hashtag
+        })
+      }
+    }
   }
 </script>
-
-<style scoped>
-
-</style>
