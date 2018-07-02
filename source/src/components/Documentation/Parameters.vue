@@ -224,7 +224,7 @@ new Shell("#awesome-shell", {
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Value must be an instance of <em>Typed</em>.
+                Value must be the <em>Typed</em> callable.
               </div>
             </div>
           </section>

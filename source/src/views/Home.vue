@@ -68,18 +68,14 @@
       return new Shell('#shell', {
         user: 'guest',
         host: 'davidecaruso.github.io',
-        path: '~',
-        style: 'ubuntu',
-        theme: 'dark',
-        responsive: false,
+        style: 'osx',
         typed: Typed,
         commands: [
-          '# I wanna be root first',
+          'I wanna be root first',
           'sudo -i',
-          '# hello bro',
-          '# this is what you can do with shell.js',
-          '# look at the examples page to see other styles and themes',
-          '# and check out the documentation for details',
+          'hello bro',
+          'this is what you can do with shell.js',
+          'check out the documentation ;)',
           'exit'
         ]
       })
@@ -92,8 +88,8 @@
 
   #shell {
     margin: 0 auto 1rem;
-    width: 100%;
     height: 40vh;
+    max-width: 60vw;
   }
 
   h1.title {
