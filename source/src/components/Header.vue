@@ -14,7 +14,48 @@
 
         <div class="navbar-menu" id="navMenu">
           <div class="navbar-end">
-            <router-link class="navbar-item" :to="{ name: 'documentation' }">Documentation</router-link>
+
+            <router-link class="navbar-item is-hidden-touch" :to="{ name: 'documentation' }">Documentation</router-link>
+            <div class="navbar-item has-dropdown is-hoverable is-hidden-desktop">
+              <router-link class="navbar-item" :to="{ name: 'documentation' }">Documentation</router-link>
+              <div class="navbar-dropdown is-boxed">
+                <div class="navbar-item is-subitem">Installation</div>
+                <router-link class="navbar-item" :to="{ path: '/documentation/start' }">
+                  <span class="navbar-item-text">Start</span>
+                </router-link>
+                <router-link class="navbar-item" :to="{ path: '/documentation/usage' }">
+                  <span class="navbar-item-text">Usage</span>
+                </router-link>
+                <div class="navbar-item is-subitem">Customization</div>
+                <router-link class="navbar-item" :to="{ path: '/documentation/parameters' }">
+                  <span class="navbar-item-text">Parameters</span>
+                </router-link>
+                <router-link class="navbar-item" style="margin-left: 1rem;" :to="{
+            path: '/documentation/parameters#user'
+            }"><span class="navbar-item-text">User</span></router-link>
+                <router-link class="navbar-item" style="margin-left: 1rem;" :to="{
+          path: '/documentation/parameters#host'
+          }"><span class="navbar-item-text">Host</span></router-link>
+                <router-link class="navbar-item" style="margin-left: 1rem;" :to="{
+          path: '/documentation/parameters#path'
+          }"><span class="navbar-item-text">Path</span></router-link>
+                <router-link class="navbar-item" style="margin-left: 1rem;" :to="{
+          path: '/documentation/parameters#style'
+          }"><span class="navbar-item-text">Style</span></router-link>
+                <router-link class="navbar-item" style="margin-left: 1rem;" :to="{
+          path: '/documentation/parameters#theme'
+          }"><span class="navbar-item-text">Theme</span></router-link>
+                <router-link class="navbar-item" style="margin-left: 1rem;" :to="{
+          path: '/documentation/parameters#responsive'
+          }"><span class="navbar-item-text">Responsive</span></router-link>
+                <router-link class="navbar-item" style="margin-left: 1rem;" :to="{
+          path: '/documentation/parameters#commands'
+          }"><span class="navbar-item-text">Commands</span></router-link>
+                <router-link class="navbar-item" style="margin-left: 1rem;" :to="{
+          path: '/documentation/parameters#typed'
+          }"><span class="navbar-item-text">Typed</span></router-link>
+              </div>
+            </div>
             <router-link class="navbar-item" :to="{ name: 'examples' }">Examples</router-link>
             <a title="View on GitHub" class="navbar-item" href="https://github.com/davidecaruso/shell.js" target="_blank"><b-icon
               icon="github-circle"
@@ -102,10 +143,14 @@
       }
     }
   }
-
   .navbar {
     background: transparent;
     padding: 0;
+
+    .navbar-dropdown .is-subitem {
+      text-transform: uppercase;
+      color: lighten($grey-dark, 40%);
+    }
 
     > .container {
       padding: 0;
