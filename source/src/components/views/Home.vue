@@ -51,8 +51,8 @@
 </template>
 
 <script>
-  import Typed from 'typed.js'
-  import Shell from 'shell.js'
+  // import Typed from '../../../../node_modules/typed.js/lib/typed'
+  // import Shell from '../../../node_modules/shell.js/lib/shell'
 
   export default {
     name: 'home',
@@ -65,26 +65,26 @@
       document.head.appendChild(script)
     },
     mounted () {
-      return new Shell('#shell', {
-        user: 'guest',
-        host: 'davidecaruso.github.io',
-        style: 'osx',
-        typed: Typed,
-        commands: [
-          'I wanna be root first',
-          'sudo -i',
-          'hello bro',
-          'this is what you can do with shell.js',
-          'check out the documentation ;)',
-          'exit'
-        ]
-      })
+      // return new Shell('#shell', {
+      //   user: 'guest',
+      //   host: 'davidecaruso.github.io',
+      //   style: 'osx',
+      //   typed: Typed,
+      //   commands: [
+      //     'I wanna be root first',
+      //     'sudo -i',
+      //     'hello bro',
+      //     'this is what you can do with shell.js',
+      //     'check out the documentation ;)',
+      //     'exit'
+      //   ]
+      // })
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  @import "../style/config";
+  @import "../../style/config";
 
   #shell {
     margin: 0 auto 1rem;

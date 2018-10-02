@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import AsideMenu from '@/components/Documentation/AsideMenu'
+  import AsideMenu from '@/components/partials/documentation/AsideMenu'
   export default {
     name: 'documentation',
     components: {AsideMenu}

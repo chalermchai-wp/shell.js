@@ -122,7 +122,7 @@
 </script>
 
 <style lang="scss">
-  @import "../style/config";
+  @import "../../style/config";
 
   #logo {
     margin: 0 .75rem;

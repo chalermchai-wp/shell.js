@@ -52,7 +52,7 @@
 </template>
 
 <script>
-  import Shell from 'shell.js'
+  import Shell from '../../../node_modules/shell.js/lib/shell'
 
   export default {
     name: 'examples',
