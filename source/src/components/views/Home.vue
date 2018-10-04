@@ -21,38 +21,38 @@
         </div>
       </div>
     </div>
-    <!--<div class="hero">-->
-      <!--<div class="hero-body">-->
-        <!--<div class="container">-->
-          <!--<div class="level is-mobile">-->
-            <!--<div class="level-item has-text-centered">-->
-              <!--<div>-->
-                <!--<p class="heading">Tweets</p>-->
-                <!--<p class="title">3,456</p>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="level-item has-text-centered">-->
-              <!--<div>-->
-                <!--<p class="heading">Following</p>-->
-                <!--<p class="title">123</p>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="level-item has-text-centered">-->
-              <!--<div>-->
-                <!--<p class="heading">Followers</p>-->
-                <!--<p class="title">456K</p>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
+    <div class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <div class="level is-mobile">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Size</p>
+                <p class="title">~ 180 KB</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Module format</p>
+                <p class="title">UMD</p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">License</p>
+                <p class="title">MIT</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
-  // import Typed from '../../../../node_modules/typed.js/lib/typed'
-  // import Shell from '../../../node_modules/shell.js/lib/shell'
+  import Typed from '../../../../node_modules/typed.js/lib/typed'
+  import Shell from '../../../node_modules/shell.js/lib/shell'
 
   export default {
     name: 'home',
@@ -65,20 +65,21 @@
       document.head.appendChild(script)
     },
     mounted () {
-      // return new Shell('#shell', {
-      //   user: 'guest',
-      //   host: 'davidecaruso.github.io',
-      //   style: 'osx',
-      //   typed: Typed,
-      //   commands: [
-      //     'I wanna be root first',
-      //     'sudo -i',
-      //     'hello bro',
-      //     'this is what you can do with shell.js',
-      //     'check out the documentation ;)',
-      //     'exit'
-      //   ]
-      // })
+      return new Shell('#shell', {
+        user: 'guest',
+        host: 'davidecaruso.github.io',
+        style: 'osx',
+        responsive: true,
+        typed: Typed,
+        commands: [
+          'I wanna be root first',
+          'sudo -i',
+          'hello bro',
+          'this is what you can do with shell.js',
+          'check out the documentation ;)',
+          'exit'
+        ]
+      })
     }
   }
 </script>
@@ -89,7 +90,12 @@
   #shell {
     margin: 0 auto 1rem;
     height: 40vh;
-    max-width: 60vw;
+    width: 100%;
+    max-width: 45vw;
+
+    @media screen and (max-width: 767px) {
+      max-width: 80vw;
+    }
   }
 
   h1.title {
