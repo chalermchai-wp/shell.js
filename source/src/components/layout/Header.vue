@@ -89,6 +89,7 @@
 
     // Get all "navbar-item" elements
     let $navbarItems = Array.prototype.slice.call(document.querySelectorAll('.navbar-item'), 0)
+
     // Check if there are any navbar items
     if ($navbarItems.length > 0) {
       // Add a click event on each of them
@@ -100,6 +101,12 @@
             // Toggle the class on both the "navbar-item" and the "navbar-menu"
             // $el.classList.toggle('is-active')
             $target.classList.remove('is-active')
+            // Toggle on navbarBurger
+            $navbarBurgers.forEach(function ($el) {
+              if ($el.classList.contains('is-active')) {
+                $el.classList.remove('is-active')
+              }
+            })
           }
         })
       })
@@ -143,6 +150,7 @@
       }
     }
   }
+
   .navbar {
     background: transparent;
     padding: 0;
@@ -177,12 +185,9 @@
       }
     }
 
-    +desktop {
+    @media (max-width: 1024px) {
       &.is-primary {
-        a {
-          color: white;
-        }
-        .navbar-burger {
+        a.navbar-burger {
           span {
             background-color: white;
           }

@@ -5,9 +5,6 @@ import App from './App'
 import router from './router'
 import VueHighlightJS from 'vue-highlightjs'
 import Buefy from 'buefy'
-import 'buefy/lib/buefy.min.css'
-import '@mdi/font/css/materialdesignicons.min.css'
-import 'highlight.js/styles/agate.css'
 
 Vue.use(Buefy)
 Vue.use(VueHighlightJS)

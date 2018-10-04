@@ -21,6 +21,7 @@
 
 <style lang="scss">
   @import "style/config";
+
   html, body {
     min-height: 100%;
   }

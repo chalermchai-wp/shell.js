@@ -93,7 +93,7 @@
     width: 100%;
     max-width: 45vw;
 
-    @media screen and (max-width: 767px) {
+    @include mobile {
       max-width: 80vw;
     }
   }
