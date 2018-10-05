@@ -51,8 +51,8 @@
 </template>
 
 <script>
-  import Typed from '../../../../node_modules/typed.js/lib/typed'
-  import Shell from '../../../node_modules/shell.js/lib/shell'
+  import Typed from 'typed.js'
+  import Shell from 'shell.js'
 
   export default {
     name: 'home',
