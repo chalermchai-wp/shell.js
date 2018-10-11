@@ -64,19 +64,19 @@
 </template>
 
 <script>
-  export default {
-    name: 'AsideMenu',
-    mounted () {
-      if (this.$route.hash) {
-        this.scrollTo(this.$route.hash)
-      }
-    },
-    methods: {
-      scrollTo: function (hashtag) {
-        setTimeout(() => {
-          location.href = hashtag
-        })
-      }
+export default {
+  name: 'AsideMenu',
+  mounted () {
+    if (this.$route.hash) {
+      this.scrollTo(this.$route.hash)
+    }
+  },
+  methods: {
+    scrollTo: function (hashtag) {
+      setTimeout(() => {
+        location.href = hashtag
+      })
     }
   }
+}
 </script>

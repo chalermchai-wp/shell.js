@@ -7,16 +7,16 @@
 </template>
 
 <script>
-  import TheHeader from '@/components/layout/Header'
-  import TheFooter from '@/components/layout/Footer'
+import TheHeader from '@/components/layout/Header'
+import TheFooter from '@/components/layout/Footer'
 
-  export default {
-    name: 'app',
-    components: {
-      TheHeader,
-      TheFooter
-    }
+export default {
+  name: 'App',
+  components: {
+    TheHeader,
+    TheFooter
   }
+}
 </script>
 
 <style lang="scss">

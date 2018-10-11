@@ -58,7 +58,8 @@
             </div>
             <router-link class="navbar-item" :to="{ name: 'examples' }">Examples</router-link>
             <a title="View on GitHub" class="navbar-item" href="https://github.com/davidecaruso/shell.js" target="_blank"><b-icon
-              icon="github-circle"
+              pack="fab"
+              icon="github"
               size="is-big">
             </b-icon></a>
           </div>
@@ -69,63 +70,63 @@
 </template>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Get all "navbar-burger" elements
-    let $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-      // Add a click event on each of them
-      $navbarBurgers.forEach(function ($el) {
-        $el.addEventListener('click', function () {
-          // Get the target from the "data-target" attribute
-          let target = $el.dataset.target
-          let $target = document.getElementById(target)
-          // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-          $el.classList.toggle('is-active')
-          $target.classList.toggle('is-active')
-        })
+document.addEventListener('DOMContentLoaded', function () {
+  // Get all "navbar-burger" elements
+  let $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+        // Get the target from the "data-target" attribute
+        let target = $el.dataset.target
+        let $target = document.getElementById(target)
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle('is-active')
+        $target.classList.toggle('is-active')
       })
-    }
+    })
+  }
 
-    // Get all "navbar-item" elements
-    let $navbarItems = Array.prototype.slice.call(document.querySelectorAll('.navbar-item'), 0)
+  // Get all "navbar-item" elements
+  let $navbarItems = Array.prototype.slice.call(document.querySelectorAll('.navbar-item'), 0)
 
-    // Check if there are any navbar items
-    if ($navbarItems.length > 0) {
-      // Add a click event on each of them
-      $navbarItems.forEach(function ($el) {
-        $el.addEventListener('click', function () {
-          let target = $el.offsetParent.querySelectorAll('.navbar-menu')
-          if (target.length > 0) {
-            let $target = document.getElementById(target[0].id)
-            // Toggle the class on both the "navbar-item" and the "navbar-menu"
-            // $el.classList.toggle('is-active')
-            $target.classList.remove('is-active')
-            // Toggle on navbarBurger
-            $navbarBurgers.forEach(function ($el) {
-              if ($el.classList.contains('is-active')) {
-                $el.classList.remove('is-active')
-              }
-            })
-          }
-        })
+  // Check if there are any navbar items
+  if ($navbarItems.length > 0) {
+    // Add a click event on each of them
+    $navbarItems.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+        let target = $el.offsetParent.querySelectorAll('.navbar-menu')
+        if (target.length > 0) {
+          let $target = document.getElementById(target[0].id)
+          // Toggle the class on both the "navbar-item" and the "navbar-menu"
+          // $el.classList.toggle('is-active')
+          $target.classList.remove('is-active')
+          // Toggle on navbarBurger
+          $navbarBurgers.forEach(function ($el) {
+            if ($el.classList.contains('is-active')) {
+              $el.classList.remove('is-active')
+            }
+          })
+        }
       })
-    }
-  })
+    })
+  }
+})
 
-  export default {
-    name: 'Header',
-    data () {
-      return {
-        isHomepage: false
-      }
-    },
-    watch: {
-      '$route' () {
-        this.isHomepage = this.$route.path === '/'
-      }
+export default {
+  name: 'Header',
+  data () {
+    return {
+      isHomepage: false
+    }
+  },
+  watch: {
+    '$route' () {
+      this.isHomepage = this.$route.path === '/'
     }
   }
+}
 </script>
 
 <style lang="scss">
@@ -135,8 +136,8 @@
     margin: 0 .75rem;
     color: transparent;
     background-color: $primary;
-    -webkit-mask: url(/static/logo.svg) no-repeat 50% 50%;
-    mask: url(/static/logo.svg) no-repeat 50% 50%;
+    -webkit-mask: url(../../assets/logo.svg) no-repeat 50% 50%;
+    mask: url(../../assets/logo.svg) no-repeat 50% 50%;
 
     &:hover {
       background-color: $primary !important;

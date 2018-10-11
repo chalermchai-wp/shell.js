@@ -7,8 +7,8 @@
           <h2 class="subtitle is-3">A <strong>JavaScript</strong> library to create HTML <strong>terminals</strong> in web pages. </h2>
           <div id="shell"></div>
 
-          <pre class="home-hero">
-<code><span class="is-unselectable">$ </span>yarn add shell.js</code>
+          <pre v-highlightjs class="home-hero">
+<code class="bash"><span class="is-unselectable">$ </span>yarn add shell.js</code>
           </pre>
 
           <div class="buttons">
@@ -51,37 +51,37 @@
 </template>
 
 <script>
-  import Typed from 'typed.js'
-  import Shell from 'shell.js'
+import Typed from 'typed.js'
+import Shell from 'shell.js'
 
-  export default {
-    name: 'home',
-    data () {
-      return {}
-    },
-    created () {
-      let script = document.createElement('script')
-      script.setAttribute('src', 'https://buttons.github.io/buttons.js')
-      document.head.appendChild(script)
-    },
-    mounted () {
-      return new Shell('#shell', {
-        user: 'guest',
-        host: 'davidecaruso.github.io',
-        style: 'osx',
-        responsive: true,
-        typed: Typed,
-        commands: [
-          'I wanna be root first',
-          'sudo -i',
-          'hello bro',
-          'this is what you can do with shell.js',
-          'check out the documentation ;)',
-          'exit'
-        ]
-      })
-    }
+export default {
+  name: 'home',
+  data () {
+    return {}
+  },
+  created () {
+    let script = document.createElement('script')
+    script.setAttribute('src', 'https://buttons.github.io/buttons.js')
+    document.head.appendChild(script)
+  },
+  mounted () {
+    return new Shell('#shell', {
+      user: 'guest',
+      host: 'davidecaruso.github.io',
+      style: 'osx',
+      responsive: true,
+      typed: Typed,
+      commands: [
+        'hello bro',
+        'wait, first I wanna be root',
+        'sudo -i',
+        'this is what you can do with <b>shell.js</b>',
+        'check out the documentation ;)',
+        'exit'
+      ]
+    })
   }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -240,11 +240,7 @@ new Shell("#awesome-shell", {
 </template>
 
 <script>
-  export default {
-    name: 'Content'
-  }
+export default {
+  name: 'Content'
+}
 </script>
-
-<style scoped>
-
-</style>

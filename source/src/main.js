@@ -6,6 +6,8 @@ import router from './router'
 import VueHighlightJS from 'vue-highlightjs'
 import Buefy from 'buefy'
 
+import 'highlight.js/styles/agate.css'
+
 Vue.use(Buefy)
 Vue.use(VueHighlightJS)
 
@@ -15,6 +17,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
-  components: { App }
+  components: { App },
+  template: '<App/>'
 })

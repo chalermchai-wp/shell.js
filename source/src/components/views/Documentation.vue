@@ -20,11 +20,11 @@
 </template>
 
 <script>
-  import AsideMenu from '@/components/partials/documentation/AsideMenu'
-  export default {
-    name: 'documentation',
-    components: {AsideMenu}
-  }
+import AsideMenu from '@/components/partials/documentation/AsideMenu'
+export default {
+  name: 'documentation',
+  components: {AsideMenu}
+}
 </script>
 
 <style scoped lang="scss">

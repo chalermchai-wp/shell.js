@@ -52,71 +52,69 @@
 </template>
 
 <script>
-  import Shell from '../../../node_modules/shell.js/lib/shell'
+import Shell from '../../../node_modules/shell.js/lib/shell'
 
-  export default {
-    name: 'examples',
-    mounted () {
-      return [
-        new Shell('#default', {
-          responsive: false,
-          user: 'guest',
-          commands: ['sudo -i', 'rm -rf /', 'exit']
-        }),
-        new Shell('#default-light', {
-          responsive: false,
-          user: 'guest',
-          theme: 'light',
-          commands: ['sudo -i', 'rm -rf /', 'exit']
-        }),
-        new Shell('#osx', {
-          responsive: false,
-          user: 'guest',
-          host: 'MacBook-Pro',
-          style: 'osx',
-          commands: ['sudo -i', 'rm -rf /', 'exit']
-        }),
-        new Shell('#osx-light', {
-          responsive: false,
-          user: 'guest',
-          host: 'MacBook-Pro',
-          style: 'osx',
-          theme: 'light',
-          commands: ['sudo -i', 'rm -rf /', 'exit']
-        }),
-        new Shell('#ubuntu', {
-          responsive: false,
-          user: 'guest',
-          host: 'localhost',
-          style: 'ubuntu',
-          commands: ['sudo -i', 'rm -rf /', 'exit']
-        }),
-        new Shell('#ubuntu-light', {
-          responsive: false,
-          user: 'guest',
-          host: 'localhost',
-          style: 'ubuntu',
-          theme: 'light',
-          commands: ['sudo -i', 'rm -rf /', 'exit']
-        }),
-        new Shell('#windows', {
-          responsive: false,
-          style: 'windows',
-          commands: ['sudo -i', 'rm -rf /', 'exit']
-        })
-      ]
-    }
+export default {
+  name: 'examples',
+  mounted () {
+    return [
+      new Shell('#default', {
+        user: 'guest',
+        commands: ['sudo -i', 'rm -rf /', 'exit']
+      }),
+      new Shell('#default-light', {
+        user: 'guest',
+        theme: 'light',
+        commands: ['sudo -i', 'rm -rf /', 'exit']
+      }),
+      new Shell('#osx', {
+        user: 'guest',
+        host: 'MacBook-Pro',
+        style: 'osx',
+        commands: ['sudo -i', 'rm -rf /', 'exit']
+      }),
+      new Shell('#osx-light', {
+        user: 'guest',
+        host: 'MacBook-Pro',
+        style: 'osx',
+        theme: 'light',
+        commands: ['sudo -i', 'rm -rf /', 'exit']
+      }),
+      new Shell('#ubuntu', {
+        user: 'guest',
+        host: 'localhost',
+        style: 'ubuntu',
+        commands: ['sudo -i', 'rm -rf /', 'exit']
+      }),
+      new Shell('#ubuntu-light', {
+        user: 'guest',
+        host: 'localhost',
+        style: 'ubuntu',
+        theme: 'light',
+        commands: ['sudo -i', 'rm -rf /', 'exit']
+      }),
+      new Shell('#windows', {
+        style: 'windows',
+        commands: ['sudo -i', 'rm -rf /', 'exit']
+      })
+    ]
   }
+}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import "../../style/config";
+
   .content {
     padding: 2rem 0 0;
     display: flex;
-    justify-content: space-between;
-  }
-  .shell {
-    width: 45%;
-    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: stretch;
+
+    .shell {
+      margin: 1em;
+    }
   }
 </style>
