@@ -1,5 +1,5 @@
 <template>
-  <div class="default-container">
+  <div class="documentation__section documentation__section--usage">
     <h1 class="title is-spaced">Usage</h1>
     <h2 class="subtitle">How to initialize a <strong>shell.js</strong> instance.</h2>
     <hr>
@@ -20,11 +20,7 @@
       <div class="media-content">
         <h4 class="subtitle">Initialize <strong>shell.js</strong>:</h4>
         <pre v-highlightjs><code class="javascript">document.addEventListener('DOMContentLoaded', function() {
-    let shell = new Shell('#awesome-shell', {
-      style: 'osx',
-      theme: 'dark',
-      commands: ['first command', 'second command', '...']
-    });
+    let shell = new Shell('#awesome-shell');
 });</code></pre>
       </div>
     </div>
@@ -33,6 +29,6 @@
 
 <script>
 export default {
-  name: 'Content'
+  name: 'DocumentationUsage'
 }
 </script>

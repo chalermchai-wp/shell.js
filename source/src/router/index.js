@@ -21,23 +21,23 @@ export default new Router({
     {
       path: '/documentation',
       name: 'documentation',
-      component: () => import('@/components/views/Documentation'),
+      component: () => import('@/components/views/documentation/Documentation'),
       redirect: 'documentation/start',
       children: [
         {
           path: 'start',
           name: 'documentation/start',
-          component: () => import('@/components/partials/documentation/Start')
+          component: () => import('@/components/views/documentation/Start')
         },
         {
           path: 'usage',
           name: 'documentation/usage',
-          component: () => import('@/components/partials/documentation/Usage')
+          component: () => import('@/components/views/documentation/Usage')
         },
         {
           path: 'parameters',
           name: 'documentation/parameters',
-          component: () => import('@/components/partials/documentation/Parameters')
+          component: () => import('@/components/views/documentation/Parameters')
         }
       ]
     },

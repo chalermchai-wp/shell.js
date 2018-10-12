@@ -1,9 +1,9 @@
 <template>
-  <section id="home">
-    <div class="hero is-fullheight is-primary">
+  <section class="home">
+    <div class="home__hero hero is-fullheight is-primary">
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title">Shell.js</h1>
+          <h1 class="title">shell.js</h1>
           <h2 class="subtitle is-3">A <strong>JavaScript</strong> library to create HTML <strong>terminals</strong> in web pages. </h2>
           <div id="shell"></div>
 
@@ -21,29 +21,23 @@
         </div>
       </div>
     </div>
-    <div class="hero">
-      <div class="hero-body">
-        <div class="container">
-          <div class="level is-mobile">
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Size</p>
-                <p class="title">~ 180 KB</p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Module format</p>
-                <p class="title">UMD</p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">License</p>
-                <p class="title">MIT</p>
-              </div>
-            </div>
-          </div>
+    <div class="home__level level">
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Size</p>
+          <p class="title">~ 180 KB</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Module format</p>
+          <p class="title">UMD</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">License</p>
+          <p class="title">MIT</p>
         </div>
       </div>
     </div>
@@ -98,17 +92,24 @@ export default {
     }
   }
 
-  h1.title {
-    color: transparent;
-    background-color: white;
-    -webkit-mask: url(/static/logo.svg) no-repeat 50% 50%;
-    mask: url(/static/logo.svg) no-repeat 50% 50%;
-    font-size: 6rem;
-  }
+  .home__hero {
+    .title {
+      color: transparent;
+      background-color: white;
+      -webkit-mask: url(../../assets/logo.svg) no-repeat 50% 50%;
+      mask: url(../../assets/logo.svg) no-repeat 50% 50%;
+      font-size: 6rem;
+    }
 
-  .buttons {
-    justify-content: center;
-    margin: 1rem 0;
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      max-width: 200px;
+      margin: 2rem auto;
+    }
+  }
+  .home__level {
+    padding: 3em 0;
   }
 
   pre {

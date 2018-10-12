@@ -1,5 +1,5 @@
 <template>
-  <div class="default-container">
+  <div class="documentation__section documentation__section--start">
     <h1 class="title is-spaced">Start</h1>
     <h2 class="subtitle">How to install <strong>shell.js</strong></h2>
     <hr>
@@ -40,15 +40,18 @@
         <pre v-highlightjs><code class="bash">npm install shell.js</code></pre>
       </div>
     </div>
-    <!--<div class="media">
-      <div class="media-left"><h4 class="subtitle">3.</h3></div>
-      <div class="media-content"><h4 class="subtitle">Use unpkg <b>CDN</b> (or download):</h3>
-        <div class="content">
-          <p><a href="https://unpkg.com/shell.js" target="_blank">https://unpkg.com/shell.js</a></p>
-          <p>CSS</p>
-        </div>
+    <div class="media">
+      <div class="media-left">
+        <h4 class="subtitle">3.</h4>
       </div>
-    </div>-->
+      <div class="media-content">
+        <h4 class="subtitle">Use <b>CDN</b>:</h4>
+        <p>
+          <a href="https://cdn.jsdelivr.net/npm/shell.js/lib/shell.min.js"
+             target="_blank">Download</a>
+        </p>
+      </div>
+    </div>
     <hr>
     <h3 class="title">Use</h3>
     <div class="media">
@@ -70,6 +73,6 @@
 
 <script>
 export default {
-  name: 'Content'
+  name: 'DocumentationStart'
 }
 </script>

@@ -1,17 +1,17 @@
 <template>
-  <section id="documentation">
-    <div class="hero is-primary">
+  <section class="documentation">
+    <div class="documentation__hero hero is-primary">
       <div class="hero-body">
         <div class="container"><p class="title">Documentation</p>
           <p class="subtitle">Let's deep into the instructions to use <strong>shell.js</strong></p></div>
       </div>
     </div>
 
-    <main class="main">
+    <main class="documentation__main">
       <div class="sidebar-bg"></div>
       <section class="section">
         <div class="container is-fullhd template-horizontal">
-          <AsideMenu />
+          <DocumentationSidebar />
           <router-view></router-view>
         </div>
       </section>
@@ -20,15 +20,17 @@
 </template>
 
 <script>
-import AsideMenu from '@/components/partials/documentation/AsideMenu'
+import DocumentationSidebar from './Sidebar'
 export default {
-  name: 'documentation',
-  components: {AsideMenu}
+  name: 'Documentation',
+  components: {DocumentationSidebar}
 }
 </script>
 
 <style scoped lang="scss">
-  .main {
+  @import "../../../style/config";
+
+  .documentation__main {
     position: relative;
     .section {
       padding-top: 0;
@@ -44,24 +46,12 @@ export default {
     top: 0;
     background: #F5F5F5;
 
-    @media screen and (max-width: 1087px) {
+    @include touch {
       display: none;
     }
   }
 
-  .sidebar {
-    min-width: 16rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-right: .5rem;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1rem;
-    overflow: auto;
-    max-height: calc(100vh - 2rem);
-  }
-
-  .template-horizontal {
+  .documentation__main .container {
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -70,13 +60,17 @@ export default {
     -ms-flex: 1;
     flex: 1;
 
-    .default-container {
+    .documentation__section {
       padding-left: 3rem;
       padding-top: 3rem;
       padding-bottom: 3rem;
       overflow: hidden;
       width: 100%;
       background: #FFFFFF;
+
+      @include touch {
+        padding-left: 0;
+      }
     }
   }
 </style>

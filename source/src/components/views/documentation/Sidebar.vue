@@ -1,5 +1,5 @@
 <template>
-  <aside class="sidebar menu is-hidden-touch">
+  <aside class="documentation__sidebar menu is-hidden-touch">
     <p class="menu-label has-text-weight-bold">Installation</p>
     <ul class="menu-list">
       <li>
@@ -65,7 +65,7 @@
 
 <script>
 export default {
-  name: 'AsideMenu',
+  name: 'DocumentationSidebar',
   mounted () {
     if (this.$route.hash) {
       this.scrollTo(this.$route.hash)
@@ -80,3 +80,17 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+  .documentation__sidebar {
+    min-width: 16rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-right: .5rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1rem;
+    overflow: auto;
+    max-height: calc(100vh - 2rem);
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
-  <section id="examples">
-    <div class="container">
+  <section class="examples">
+    <div class="examples__container">
       <section class="section">
         <div class="container">
           <h1 class="title">Default</h1>
@@ -60,17 +60,20 @@ export default {
     return [
       new Shell('#default', {
         user: 'guest',
+        responsive: false,
         commands: ['sudo -i', 'rm -rf /', 'exit']
       }),
       new Shell('#default-light', {
         user: 'guest',
         theme: 'light',
+        responsive: false,
         commands: ['sudo -i', 'rm -rf /', 'exit']
       }),
       new Shell('#osx', {
         user: 'guest',
         host: 'MacBook-Pro',
         style: 'osx',
+        responsive: false,
         commands: ['sudo -i', 'rm -rf /', 'exit']
       }),
       new Shell('#osx-light', {
@@ -78,12 +81,14 @@ export default {
         host: 'MacBook-Pro',
         style: 'osx',
         theme: 'light',
+        responsive: false,
         commands: ['sudo -i', 'rm -rf /', 'exit']
       }),
       new Shell('#ubuntu', {
         user: 'guest',
         host: 'localhost',
         style: 'ubuntu',
+        responsive: false,
         commands: ['sudo -i', 'rm -rf /', 'exit']
       }),
       new Shell('#ubuntu-light', {
@@ -91,6 +96,7 @@ export default {
         host: 'localhost',
         style: 'ubuntu',
         theme: 'light',
+        responsive: false,
         commands: ['sudo -i', 'rm -rf /', 'exit']
       }),
       new Shell('#windows', {
@@ -105,16 +111,26 @@ export default {
 <style lang="scss" scoped>
   @import "../../style/config";
 
-  .content {
-    padding: 2rem 0 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: stretch;
-    align-items: stretch;
+  .examples .examples__container {
+    .container {
+      width: 100%;
+    }
+    .content {
+      padding: 2rem 0 0;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-content: stretch;
+      align-items: stretch;
 
-    .shell {
-      margin: 1em;
+      .shell {
+        width: 100%;
+        max-width: 35vw;
+        @include touch {
+          max-width: initial;
+          margin-bottom: 2em;
+        }
+      }
     }
   }
 </style>

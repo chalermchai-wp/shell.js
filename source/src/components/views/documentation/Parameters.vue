@@ -1,10 +1,10 @@
 <template>
-  <div class="default-container">
+  <div class="documentation__section documentation__section--parameters">
     <h1 class="title is-spaced">Customization</h1>
-    <h2 class="subtitle">Customize <strong>shell.js</strong> as you desire using its parameters.</h2>
+    <h2 class="subtitle">How to customize <strong>shell.js</strong>.</h2>
     <hr>
     <h3 id="user" class="title">User</h3>
-    <h4 class="subtitle">The logged user of the shell session.</h4>
+    <h4 class="subtitle">The logged user of the terminal.</h4>
     <div class="media">
       <div class="media-content">
         <article class="message is-info">
@@ -20,7 +20,7 @@
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Value should be of type <em>string</em>.
+                Value type must be <em>string</em>.
               </div>
             </div>
           </section>
@@ -33,7 +33,7 @@ new Shell("#awesome-shell", {
     </div>
     <hr>
     <h3 id="host" class="title">Host</h3>
-    <h4 class="subtitle">The host of the shell session.</h4>
+    <h4 class="subtitle">The host of the terminal.</h4>
     <div class="media">
       <div class="media-content">
         <article class="message is-info">
@@ -49,7 +49,7 @@ new Shell("#awesome-shell", {
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Value should be of type <em>string</em>.
+                Value type must be <em>string</em>.
               </div>
             </div>
           </section>
@@ -62,15 +62,14 @@ new Shell("#awesome-shell", {
     </div>
     <hr>
     <h3 id="path" class="title">Path</h3>
-    <h4 class="subtitle">The working directory of the shell session.</h4>
+    <h4 class="subtitle">The working directory of the terminal.</h4>
     <div class="media">
       <div class="media-content">
         <article class="message is-info">
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Default value is <strong>"~"</strong> OR <strong>"C:\Windows\system32\"</strong> (for Windows <a href="#style">
-                style</a>).
+                Default value is <strong>"~"</strong> OR <strong>"C:\Windows\system32\"</strong>.
               </div>
             </div>
           </section>
@@ -79,7 +78,7 @@ new Shell("#awesome-shell", {
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Value should be of type <em>string</em>.
+                Value type must be <em>string</em>.
               </div>
             </div>
           </section>
@@ -92,7 +91,7 @@ new Shell("#awesome-shell", {
     </div>
     <hr>
     <h3 id="style" class="title">Style</h3>
-    <h4 class="subtitle">Choose the style of the shell by one of the most popular OSs.</h4>
+    <h4 class="subtitle">Choose the operating system style of the terminal.</h4>
     <div class="media">
       <div class="media-content">
         <article class="message is-info">
@@ -108,7 +107,7 @@ new Shell("#awesome-shell", {
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Value should be of type <em>string</em> and must be one of <strong>"default"</strong>, <strong>"osx"</strong>, <strong>"ubuntu"</strong>, <strong>"windows"</strong>.
+                Value type must be <em>string</em> and must be one of <strong>"default"</strong>, <strong>"osx"</strong>, <strong>"ubuntu"</strong>, <strong>"windows"</strong>.
               </div>
             </div>
           </section>
@@ -121,7 +120,7 @@ new Shell("#awesome-shell", {
     </div>
     <hr>
     <h3 id="theme" class="title">Theme</h3>
-    <h4 class="subtitle">Go to the dark or the light side.</h4>
+    <h4 class="subtitle">Choose between the dark and the light side.</h4>
     <div class="media">
       <div class="media-content">
         <article class="message is-info">
@@ -137,7 +136,7 @@ new Shell("#awesome-shell", {
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Value should be of type <em>string</em> and must be one of <strong>"light"</strong>, <strong>"dark"</strong>.
+                Value type must be <em>string</em> and must be one of <strong>"light"</strong>, <strong>"dark"</strong>.
               </div>
             </div>
           </section>
@@ -150,7 +149,6 @@ new Shell("#awesome-shell", {
     </div>
     <hr>
     <h3 id="responsive" class="title">Responsive</h3>
-    <h4 class="subtitle">Adapt size to the needs.</h4>
     <div class="media">
       <div class="media-content">
         <article class="message is-info">
@@ -166,7 +164,7 @@ new Shell("#awesome-shell", {
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Value must be of type <em>boolean</em>.
+                Value type must be <em>boolean</em>.
               </div>
             </div>
           </section>
@@ -179,7 +177,7 @@ new Shell("#awesome-shell", {
     </div>
     <hr>
     <h3 id="commands" class="title">Commands</h3>
-    <h4 class="subtitle">List of shell commands.</h4>
+    <h4 class="subtitle">List of terminal commands.</h4>
     <div class="media">
       <div class="media-content">
         <article class="message is-info">
@@ -195,7 +193,7 @@ new Shell("#awesome-shell", {
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Value must be of type <em>array</em>.
+                Value type must be <em>array</em>.
               </div>
             </div>
           </section>
@@ -224,7 +222,7 @@ new Shell("#awesome-shell", {
           <section class="message-body">
             <div class="media">
               <div class="media-content">
-                Value must be the <em>Typed</em> callable.
+                Value must be <em>Typed</em> callable OR <em>null</em>.
               </div>
             </div>
           </section>
@@ -241,6 +239,6 @@ new Shell("#awesome-shell", {
 
 <script>
 export default {
-  name: 'Content'
+  name: 'DocumentationParameters'
 }
 </script>
