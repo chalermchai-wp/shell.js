@@ -61,7 +61,20 @@ export default {
       new Shell('#default', {
         user: 'guest',
         responsive: false,
-        commands: ['sudo -i', 'rm -rf /', 'exit']
+        commands: ['sudo -i', 'rm -rf /', 'exit', {
+          'input': 'ls -la',
+          'output': [
+            'total 41612',
+            'drwxr-xr-x&nbsp;42 root root 4096 May 25 12:00 ./',
+            'drwxr-xr-x&nbsp;&nbsp;3 root root 4096 May 25 12:00 ../',
+            'drwxr-xr-x&nbsp;&nbsp;3 root root 4096 May 25 12:00 Desktop',
+            'drwxr-xr-x&nbsp;&nbsp;3 root root 4096 May 25 12:00 Documents',
+            'drwxr-xr-x&nbsp;&nbsp;3 root root 4096 May 25 12:00 Downloads',
+            'drwxr-xr-x&nbsp;&nbsp;3 root root 4096 May 25 12:00 Music',
+            'drwxr-xr-x&nbsp;&nbsp;3 root root 4096 May 25 12:00 Pictures',
+            'drwxr-xr-x&nbsp;&nbsp;3 root root 4096 May 25 12:00 Videos'
+          ]
+        }]
       }),
       new Shell('#default-light', {
         user: 'guest',

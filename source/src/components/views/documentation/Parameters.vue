@@ -200,7 +200,11 @@ new Shell("#awesome-shell", {
         </article>
         <pre v-highlightjs><code class="javascript">// Example:
 new Shell("#awesome-shell", {
-  commands: ["this is the first commands", "and this is the second"]
+  commands: [
+    "simple string command",
+    {"input": "input command", "output": "simple output"},
+    {"input": "input command", "output": ["first output line", "second output line"]},
+  ]
 });</code></pre>
       </div>
     </div>
