@@ -25,7 +25,7 @@
       <div class="level-item has-text-centered">
         <div>
           <p class="heading">Size</p>
-          <p class="title">~ 180 KB</p>
+          <p class="title">&lt; 41 KB</p>
         </div>
       </div>
       <div class="level-item has-text-centered">
