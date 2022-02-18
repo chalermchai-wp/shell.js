@@ -10,4 +10,7 @@ export interface Options {
     responsive: boolean;
     commands: string[];
     root: boolean;
+    typedSpeed: number;
+    typedLoop: Boolean;
+    typedDelay: number;
 }
