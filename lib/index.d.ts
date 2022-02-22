@@ -3,22 +3,23 @@
  * shell.js version: v3.3.1
  */
 
+ import Typed from "typed.js";
  declare module 'shell.js' {
 
     interface Options {
-        commands: any[],
+        commands: [],
         host: string,
         path: string,
         responsive: boolean,
         root: boolean,
         style: Style,
         theme: Theme,
-        typed?: any,
+        typed?: Typed,
         user: string,
         char?: string
-        typedSpeed: number;
-        typedLoop: Boolean;
-        typedDelay: number;
+        typedSpeed?: number;
+        typedLoop?: Boolean;
+        typedDelay?: number;
 
     }
 
