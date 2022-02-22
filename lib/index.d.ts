@@ -19,6 +19,7 @@
         typedSpeed: number;
         typedLoop: Boolean;
         typedDelay: number;
+
     }
 
     const enum Style {
