@@ -16,9 +16,9 @@ module.exports = class Shell {
         theme: Theme.DARK,
         typed: undefined,
         user: 'user',
-        typedSpeed: 1500,
+        typedSpeed: 2000,
         typedLoop: true,
-        typedDelay: 600
+        typedDelay: 300
     }
 
     /**
