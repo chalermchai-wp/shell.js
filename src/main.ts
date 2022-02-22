@@ -81,7 +81,7 @@ module.exports = class Shell {
     private type(index: number, commandsNum: number): void {
         if (commandsNum > 0) {
             let line = $(`.line[data-index="${index}"]`, this.el)
-            let delay = this.options.typedDelay ? this.options.typedDelay : 600
+            let delay = this.options.typedDelay
 
             // If line exists
             if (line.length) {
@@ -100,8 +100,8 @@ module.exports = class Shell {
                     // Create a new instance of Typed.js
                     new this.options.typed(commandEl[0], {
                         strings: [`${commandContent}^${delay}`],
-                        typeSpeed: this.options.typedSpeed ? this.options.typedSpeed : 90,
-                        loop: this.options.typedLoop ? this.options.typedLoop : false,
+                        typeSpeed: this.options.typedSpeed,
+                        loop: this.options.typedLoop,
                         contentType: 'html',
                         cursorChar: '&nbsp;',
                         showCursor: true,
