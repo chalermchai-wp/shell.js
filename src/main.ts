@@ -16,7 +16,7 @@ module.exports = class Shell {
         theme: Theme.DARK,
         typed: undefined,
         user: 'user',
-        typedSpeed: 5000,
+        typedSpeed: 9,
         typedLoop: true,
         typedDelay: 100
     }
@@ -100,7 +100,7 @@ module.exports = class Shell {
                     // Create a new instance of Typed.js
                     new this.options.typed(commandEl[0], {
                         strings: [`${commandContent}^${delay}`],
-                        typeSpeed: 9000,
+                        typeSpeed: 9,
                         loop: true,
                         contentType: 'html',
                         cursorChar: '&nbsp;',

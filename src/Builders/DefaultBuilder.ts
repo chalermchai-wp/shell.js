@@ -27,6 +27,33 @@ export class DefaultBuilder implements BuilderInterface {
     }
 
     /**
+     * Get the Shell typedSpeed,
+     *
+     * @return {number}
+     */
+     get typedSpeed(): number {
+        return this.options.typedSpeed ? this.options.typedSpeed : 90
+    }
+
+    /**
+     * Get the Shell typedSpeed,
+     *
+     * @return {boolean}
+     */
+    get typedLoop(): boolean {
+        return !!this.options.typedLoop
+    }
+
+    /**
+     * Get the Shell typedSpeed,
+     *
+     * @return {number}
+     */
+    get typedDelay(): number {
+        return this.options.typedDelay ? this.options.typedDelay : 600
+    }
+
+    /**
      * DefaultBuilder constructor.
      * @param {Options} options Object of options.
      *
