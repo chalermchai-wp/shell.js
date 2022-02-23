@@ -81,7 +81,7 @@ module.exports = class Shell {
     private type(index: number, commandsNum: number): void {
         if (commandsNum > 0) {
             let line = $(`.line[data-index="${index}"]`, this.el)
-            let delay = this.options.typedDelay
+            let delay = 1
 
             // If line exists
             if (line.length) {
