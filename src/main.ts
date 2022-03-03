@@ -66,6 +66,9 @@ module.exports = class Shell {
         this.el.innerHTML = shell.toString()
 
         // Typed.js integration
+        console.log(this.options.typed)
+        console.log(typeof this.options.typed === 'function')
+        console.log(this.options.typed && typeof this.options.typed === 'function')
         if (this.options.typed && typeof this.options.typed === 'function') {
             this.type(0, $(`.line`, this.el).length || 0)
         }
@@ -101,7 +104,7 @@ module.exports = class Shell {
                     new this.options.typed(commandEl[0], {
                         strings: [`${commandContent}^${delay}`],
                         typeSpeed: 10,
-                        loop: true,
+                        loop: false,
                         contentType: 'html',
                         cursorChar: '&nbsp;',
                         showCursor: true,
