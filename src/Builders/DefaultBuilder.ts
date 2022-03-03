@@ -32,11 +32,11 @@ export class DefaultBuilder implements BuilderInterface {
      * @return {number}
      */
      get typedSpeed(): number {
-        return this.options.typedSpeed ? this.options.typedSpeed : 90
+        return this.options.typedSpeed ? this.options.typedSpeed : 20
     }
 
     /**
-     * Get the Shell typedSpeed,
+     * Get the Shell typedLoop,
      *
      * @return {boolean}
      */
@@ -45,7 +45,7 @@ export class DefaultBuilder implements BuilderInterface {
     }
 
     /**
-     * Get the Shell typedSpeed,
+     * Get the Shell typedDelay,
      *
      * @return {number}
      */

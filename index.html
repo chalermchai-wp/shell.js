@@ -29,6 +29,9 @@
             host: 'bar',
             typed: Typed,
             responsive: true,
+            typedSpeed: 25,
+            typedLoop: true,
+            typedDelay: 100,
             commands: ['sudo -i', 'rm -rf /', 'exit', {'input': 'pwd', 'output': ['/Users/John Doe']}]
         });
         new Shell('#default-light', {
