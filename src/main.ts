@@ -100,7 +100,7 @@ module.exports = class Shell {
                     // Create a new instance of Typed.js
                     new this.options.typed(commandEl[0], {
                         strings: [`${commandContent}^${delay}`],
-                        typeSpeed: 20,
+                        typeSpeed: 10,
                         loop: true,
                         contentType: 'html',
                         cursorChar: '&nbsp;',
